@@ -1,5 +1,5 @@
 import { hash, compare } from 'bcryptjs'
-import { Encrypter } from '@/protocols/encrypter'
+import { Encrypter } from '@/adapters/encrypter'
 
 export class BcryptAdapter implements Encrypter {
   async encrypt(value: string): Promise<string> {
