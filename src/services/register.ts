@@ -1,6 +1,6 @@
 import { UsersRepository } from '@/protocols/users-repository'
 import { BcryptAdapter } from 'infra/bcrypt-adapter'
-import { UserAlreadyExistsError } from '@/errors/user-already-existsError'
+import { UserAlreadyExistsError } from '@/errors/user-already-exists-error'
 import type { User } from '@prisma/client'
 interface RegisterServiceRequest {
   name: string
@@ -9,7 +9,6 @@ interface RegisterServiceRequest {
 }
 
 interface RegisterServiceResponse {
-  id: string
   user: User
 }
 
